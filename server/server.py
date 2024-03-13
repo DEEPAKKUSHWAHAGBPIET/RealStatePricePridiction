@@ -5,7 +5,7 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/get_location_names', methods=['GET'])
+@app.route('/get_location_names', methods=['GET', 'POST'])
 def get_location_names():
     response = jsonify({
         'locations': util.get_location_names()
